@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using TracerLib;
 
 
-namespace CPP_Tracer
+namespace SPPTracer
 {
 
     class Program
@@ -13,9 +13,7 @@ namespace CPP_Tracer
         public static ITracer tracer = new Tracer();
         
         static void Main(string[] args)
-        {
-           
-    
+        {           
             /* Foo foo = new Foo(tracer);
              Thread t1 = new Thread(foo.MyMethod);
              Thread t2 = new Thread(MyMethod1);
@@ -60,10 +58,14 @@ namespace CPP_Tracer
             copy = new List<Threade>(res);
             string jsonRes = traceResultSerializer.Serialize(res);
 
-            string xmlRes = traceResultSerializer2.Serialize(copy); 
-         
-            File.WriteAllText(@"F:\path.json", jsonRes);
-            File.WriteAllText(@"F:\path.xml", xmlRes);
+            string xmlRes = traceResultSerializer2.Serialize(copy);
+
+            OutputConsole con = new OutputConsole();
+            OutputFile fil = new OutputFile();
+
+            con.output(xmlRes, jsonRes);
+            fil.output(xmlRes, jsonRes);
+
 
         }
 
