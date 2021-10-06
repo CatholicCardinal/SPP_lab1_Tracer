@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.Json;
 
-namespace CPP_Tracer
+namespace TracerLib
 {
-    class JsonTraceResultSerializer : ITraceResultSerializer
+    public class JsonTraceResultSerializer : ITraceResultSerializer
     {
         JsonSerializerOptions options = new JsonSerializerOptions
         {

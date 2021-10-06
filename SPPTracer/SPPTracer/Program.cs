@@ -2,6 +2,7 @@
 using System.IO;
 using System.Threading;
 using System.Collections.Generic;
+using TracerLib;
 
 
 namespace CPP_Tracer
@@ -10,8 +11,11 @@ namespace CPP_Tracer
     class Program
     {
         public static ITracer tracer = new Tracer();
+        
         static void Main(string[] args)
         {
+           
+    
             /* Foo foo = new Foo(tracer);
              Thread t1 = new Thread(foo.MyMethod);
              Thread t2 = new Thread(MyMethod1);
@@ -33,7 +37,7 @@ namespace CPP_Tracer
              t2.Join();
              tracer.StopTrace();*/
 
-           
+
             Thread t2 = new Thread(MyMethod1);
             t2.Start();
             t2.Join();

@@ -5,10 +5,11 @@ using System.Reflection;
 using System.Text;
 using System.Threading;
 
-namespace CPP_Tracer
+namespace TracerLib
 {
-    class Tracer : ITracer
+    public class Tracer : ITracer
     {
+ 
         List<List<TraceResult>> AllThredsMethods = new List<List<TraceResult>>();
         TraceResult Result = new TraceResult();
         private Stack<Stopwatch> stopWatch = new Stack<Stopwatch>();

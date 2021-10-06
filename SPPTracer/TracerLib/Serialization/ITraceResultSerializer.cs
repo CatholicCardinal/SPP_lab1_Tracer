@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CPP_Tracer
+namespace TracerLib
 {
     public interface ITraceResultSerializer
     {

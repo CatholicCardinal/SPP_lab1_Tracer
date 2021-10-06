@@ -4,7 +4,7 @@ using System.IO;
 using System.Xml.Serialization;
 
 
-namespace CPP_Tracer
+namespace TracerLib
 {
     public class XMLTraceResultSerializer : ITraceResultSerializer
     {

@@ -4,7 +4,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
-namespace CPP_Tracer
+namespace TracerLib
 {
     [Serializable]
     [XmlType("TraceResult")]
